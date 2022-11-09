@@ -1,0 +1,52 @@
+{
+  {
+    "id": 0,
+    "name": "RedBull",
+    "performance_score": 98,
+  },
+  {
+    "id": 1,
+    "name": "Mercedes",
+    "performance_score": 93,
+  },
+  {
+    "id": 2,
+    "name": "Ferrari",
+    "performance_score": 91,
+  },
+  {
+    "id": 3,
+    "name": "Alpine",
+    "performance_score": 83,
+  },
+  {
+    "id": 4,
+    "name": "McLaren",
+    "performance_score": 80,
+  },
+  {
+    "id": 5,
+    "name": "Alfa Romeo",
+    "performance_score": 76,
+  },
+  {
+    "id": 6,
+    "name": "Astom Martin",
+    "performance_score": 68,
+  },
+  {
+    "id": 7,
+    "name": "Haas F1 Team",
+    "performance_score": 55,
+  },
+  {
+    "id": 8,
+    "name": "AlphaTauri",
+    "performance_score": 50,
+  },
+  {
+    "id": 9,
+    "name": "Williams",
+    "performance_score": 47,
+  },
+}

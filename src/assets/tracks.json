@@ -1,0 +1,54 @@
+{
+    {
+        "id": 0,
+        "name": "Bahrain",
+    },
+    {
+        "id": 1,
+        "name": "Saudi Arabia",
+    },
+    {
+        "id": 2,
+        "name": "Australia",
+    },
+    {
+        "id": 3,
+        "name": "Imola",
+    },
+    {
+        "id": 4,
+        "name": "Miami",
+    },
+    {
+        "id": 4,
+        "name": "Barcelona",
+    },
+    {
+        "id": 5,
+        "name": "Monaco",
+    },
+    {
+        "id": 6,
+        "name": "Azerbaijan",
+    },
+    {
+        "id": 7,
+        "name": "Canada",
+    },
+    {
+        "id": 8,
+        "name": "Silverstone",
+    },
+    {
+        "id": 9,
+        "name": "Austria",
+    },
+    {
+        "id": 10,
+        "name": "France",
+    },
+    {
+        "id": 11,
+        "name": "SPA",
+    },
+}

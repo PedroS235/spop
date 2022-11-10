@@ -1,54 +1,54 @@
-{
+[
     {
         "id": 0,
-        "name": "Bahrain",
+        "name": "Bahrain"
     },
     {
         "id": 1,
-        "name": "Saudi Arabia",
+        "name": "Saudi Arabia"
     },
     {
         "id": 2,
-        "name": "Australia",
+        "name": "Australia"
     },
     {
         "id": 3,
-        "name": "Imola",
+        "name": "Imola"
     },
     {
         "id": 4,
-        "name": "Miami",
+        "name": "Miami"
     },
     {
         "id": 4,
-        "name": "Barcelona",
+        "name": "Barcelona"
     },
     {
         "id": 5,
-        "name": "Monaco",
+        "name": "Monaco"
     },
     {
         "id": 6,
-        "name": "Azerbaijan",
+        "name": "Azerbaijan"
     },
     {
         "id": 7,
-        "name": "Canada",
+        "name": "Canada"
     },
     {
         "id": 8,
-        "name": "Silverstone",
+        "name": "Silverstone"
     },
     {
         "id": 9,
-        "name": "Austria",
+        "name": "Austria"
     },
     {
         "id": 10,
-        "name": "France",
+        "name": "France"
     },
     {
         "id": 11,
-        "name": "SPA",
-    },
-}
+        "name": "SPA"
+    }
+]

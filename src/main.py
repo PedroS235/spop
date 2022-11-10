@@ -1,5 +1,3 @@
-from cli.Menu import Menu
-from cli.MenuItem import MenuItem
 from game import Game
 
 
@@ -9,6 +7,13 @@ class System:
         self.game = Game()
         self.currenMenu = None
 
+    def start(self):
+        self.loop()
+
     def loop(self):
-        while not self.exit:
-            pass
+        self.game.newGame()
+
+
+if __name__ == "__main__":
+    system = System()
+    system.start()

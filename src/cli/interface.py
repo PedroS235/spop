@@ -1,8 +1,37 @@
-class Interface:
-    def displayMenu(self):
-        pass
+"""
+Author: Pedro Soares
+Date: 13/11/2022
+Product Name: SPOP - F1 CLI Game
 
-    def promptSelection(self, msg: str, range: tuple):
+Description:
+    SPOP is a simple game that combines both Formula 1 and a quiz gameself.
+    A Formula 1 championship is composed of a series of race weekends,
+    where each race weekend is composed of a practice session, a qualifying
+    session and a race. For this game, only the qualifying and race sessions are
+    considered and thus a race weekend is composed of a qualifying and a race.
+    In order to simulate the qualifying, the game presents a quiz based on
+    Formula 1, which based on the answers will determine in what position the
+    user will end up. The position is also based on a team performance score,
+    which tries to replicate the performance of the real teams.
+    As for the race, this will be entirely simulated based on the qualifying
+    position and the team performance score.
+    The main objective of this SPOP, is to entertain the users.
+
+File Description:
+    Contains the main class for the interface utilities functions. For more
+    information please refer to the different docstrings.
+"""
+
+
+class Interface:
+    """Interface class which contains useful methods to display information.
+
+        This class contains 2 methods to display text to the screen. The first one 
+        is to display the available teams and ask the player to choose one. The
+        second one is to display a quiz answer and ask the player to choose one.
+    """
+
+    def _prompt_selection(self, msg: str, selection_range: tuple):
         """
         This method prompts a message with the intent of retrieving an index.
         In case the user enters an invalid range, it will re-prompt until it
@@ -22,7 +51,7 @@ class Interface:
         except ValueError:
             index = -1
 
-        while index < range[0] or index > range[1]:
+        while index < selection_range[0] or index > selection_range[1]:
             print("Error: Make sure you have entered a valid value!")
             try:
                 index = int(input(msg))
@@ -31,7 +60,7 @@ class Interface:
 
         return index
 
-    def displayAvailableTeams(self, teams: list):
+    def display_available_teams(self, teams: list):
         """
         This method prints the available teams in the terminal
         and prompts the user to choose one of the teams.
@@ -47,9 +76,10 @@ class Interface:
         print(f"There are {len(teams)} available teams for you to choose:")
         print("| ID | Name | Performance score |")
         for team in teams:
-            print(f"| {team['id']} | {team['name']} | {team['performance_score']}")
+            print(
+                f"| {team['id']} | {team['name']} | {team['performance_score']}")
 
-        selected_id = self.promptSelection(
+        selected_id = self._prompt_selection(
             "Enter the team ID you want: ", (0, len(teams) - 1)
         )
         for team in teams:
@@ -57,11 +87,22 @@ class Interface:
                 return team
         return None
 
-    def displayQuizAnswers(self, answers: list):
+    def display_quiz_answers(self, answers: list):
+        """
+        This method prints a quiz possible answers and prompts the user to
+        choose one of the possible answers.
+
+        Args:
+            answers: List of the answers to be displayed.
+
+        returns:
+            The selected answer index.
+        """
+
         for index, answer in enumerate(answers):
             print(f"{index+1} - {answer}")
 
-        return self.promptSelection(
+        return self._prompt_selection(
             "Enter the answer number you think is the correct answer: ",
             (1, len(answers)),
         )

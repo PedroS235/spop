@@ -56,3 +56,12 @@ class Interface:
             if team["id"] == selected_id:
                 return team
         return None
+
+    def displayQuizAnswers(self, answers: list):
+        for index, answer in enumerate(answers):
+            print(f"{index+1} - {answer}")
+
+        return self.promptSelection(
+            "Enter the answer number you think is the correct answer: ",
+            (1, len(answers)),
+        )

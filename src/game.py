@@ -1,6 +1,7 @@
 from utils import retrieveJsonData
 from cli.interface import Interface
 import os
+import random
 
 
 class Game:
@@ -45,12 +46,22 @@ class Game:
             f"Welcome to you first race weekend which has place in {self.current_track['name']}"
         )
         print("Let's start with the qualifying and see how well you know Formula 1")
+        self.simulateQualifying()
 
     def simulateRace(self):
         pass
 
     def simulateQualifying(self):
-        pass
+        quiz = self.quizzes[random.randint(0, len(self.quizzes) - 1)]
+        print("\n--------------------\n")
+        print(f"Welcome to the race weekend in {self.current_track['name']}")
+        print("You are now in qualifying!")
+        print()
+        print("Please answer the following question in order to qualify.")
+        print(quiz["question"])
+
+        answer_idx = self.interface.displayQuizAnswers(quiz["answers"])
+        print(answer_idx == quiz["correct_answer_index"])
 
     def gameLoop(self):
         while True:

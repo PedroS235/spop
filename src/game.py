@@ -1,6 +1,8 @@
 """
 Author: Pedro Soares
-Date: 13/11/2022
+Date: 14/11/2022
+Time: 17:21
+Version: 0.1
 Product Name: SPOP - F1 CLI Game
 
 Description:
@@ -127,7 +129,6 @@ class Game:
                 print("Wrong answer!")
 
         accuracy = correct_answers * 100.0 / 3
-        print(accuracy)
         position = int(10 - randint(0, 2) -
                        (10 * accuracy/self.selected_team['performance_score']))
         if position == 0:

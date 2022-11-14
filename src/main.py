@@ -1,6 +1,8 @@
 """
 Author: Pedro Soares
 Date: 13/11/2022
+Time: 17:00
+Version: 0.1
 Product Name: SPOP - F1 CLI Game
 
 Description:

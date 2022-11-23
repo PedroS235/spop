@@ -55,7 +55,6 @@ class Game:
     def simulateQualifying(self):
         quiz = self.quizzes[random.randint(0, len(self.quizzes) - 1)]
         os.system('cls||clear')
-        print("\n--------------------\n")
         print(f"Welcome to the race weekend in {self.current_track['name']}")
         print("You are now in qualifying!")
         print()

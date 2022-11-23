@@ -20,6 +20,7 @@ class Game:
         - [] Ask player to select a team
         - [] Move to first race weekend
         """
+        os.system('cls||clear')
         print("****************************")
         print("Welcome to the F1 Quiz game!")
         print("****************************")
@@ -53,6 +54,7 @@ class Game:
 
     def simulateQualifying(self):
         quiz = self.quizzes[random.randint(0, len(self.quizzes) - 1)]
+        os.system('cls||clear')
         print("\n--------------------\n")
         print(f"Welcome to the race weekend in {self.current_track['name']}")
         print("You are now in qualifying!")

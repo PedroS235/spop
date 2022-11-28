@@ -37,14 +37,14 @@ class Menu:
     def add_menu_item(self, item):
         self.menu_items.append(item)
 
-    def selectMenuItem(self, index):
-        assert index <= len(self.menuItems) and index >= 1
-        self.menuItems[index-1].onClick()
+    def select_menu_item(self, index):
+        assert index <= len(self.menu_items) and index >= 1
+        self.menu_items[index-1].on_click()
 
-    def nbrOfMenuItems(self):
-        return len(self.menuItems)
+    def nbr_of_menu_items(self):
+        return len(self.menu_items)
 
-    def printMenu(self):
+    def print_menu(self):
         os.system('cls||clear')
         print("-" * (len(self.title) + 4))
         print(f"| {self.title} |")

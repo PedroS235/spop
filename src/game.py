@@ -26,7 +26,7 @@ File Description:
 from os import path, system
 from random import randint
 
-from utils import retrieve_json_data
+from utils import load_json
 from cli.interface import Interface
 
 
@@ -50,9 +50,9 @@ class Game:
     def __init__(self):
         dirname = path.dirname(__file__)
 
-        self.teams = retrieve_json_data(f"{dirname}/assets/teams.json")
-        self.tracks = retrieve_json_data(f"{dirname}/assets/tracks.json")
-        self.quizzes = retrieve_json_data(f"{dirname}/assets/quizzes.json")
+        self.teams = load_json(f"{dirname}/assets/teams.json")
+        self.tracks = load_json(f"{dirname}/assets/tracks.json")
+        self.quizzes = load_json(f"{dirname}/assets/quizzes.json")
         self.interface = Interface()
         self.selected_team = None
         self.current_track = self.tracks[0]
@@ -99,19 +99,13 @@ class Game:
         performance.
         """
 
-<<<<<<< HEAD
-    def simulateQualifying(self):
-        quiz = self.quizzes[random.randint(0, len(self.quizzes) - 1)]
-        os.system('cls||clear')
-=======
     def simulate_qualifying(self):
         """
         Simulates the qualifying by making the player answering 3 quizz questions.
         The the qualifying position will be computed based on his answers
         and the team score performance.
         """
-        print("\n--------------------\n")
->>>>>>> 2230f44c972ccd45ba9bf4680d385e624b78ea39
+        system("cls||clear")
         print(f"Welcome to the race weekend in {self.current_track['name']}")
         print("You are now in qualifying!")
         print()

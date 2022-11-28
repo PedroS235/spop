@@ -26,7 +26,7 @@ File Description:
 """
 from game import Game
 from cli.interface import Interface
-from main_menu import welcome_menu
+from menus import welcome_menu
 
 
 class System:
@@ -40,10 +40,10 @@ class System:
         self.currentMenu = None
 
     def start(self):
-        welcome_menu.printMenu()
-        selection = self.interface.promptSelection(
-            "Please choose one of the available options: ", (1, welcome_menu.nbrOfMenuItems()))
-        welcome_menu.selectMenuItem(selection)
+        welcome_menu.print_menu()
+        selection = self.interface.prompt_selection(
+            "Please choose one of the available options: ", (1, welcome_menu.nbr_of_menu_items()))
+        welcome_menu.select_menu_item(selection)
         # self.loop()
 
 

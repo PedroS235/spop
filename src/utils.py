@@ -25,7 +25,7 @@ File Description:
 import json
 
 
-def retrieve_json_data(path: str):
+def load_json(path: str):
     """
     Reads a json file from a path and returs its data in a python dictionary.
 
@@ -35,3 +35,8 @@ def retrieve_json_data(path: str):
     with open(path, 'r', encoding='utf-8') as file:
         json_data = json.load(file)
     return json_data
+
+
+def save_json(path: str, data: dict):
+    with open(path, 'w', encoding='utf-8') as file:
+        json.dump(data, file)

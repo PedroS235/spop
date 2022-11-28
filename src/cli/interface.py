@@ -33,7 +33,7 @@ class Interface:
         second one is to display a quiz answer and ask the player to choose one.
     """
 
-    def _prompt_selection(self, msg: str, selection_range: tuple):
+    def prompt_selection(self, msg: str, selection_range: tuple):
         """
         This method prompts a message with the intent of retrieving an index.
         In case the user enters an invalid range, it will re-prompt until it
@@ -81,7 +81,7 @@ class Interface:
             print(
                 f"| {team['id']} | {team['name']} | {team['performance_score']}")
 
-        selected_id = self._prompt_selection(
+        selected_id = self.prompt_selection(
             "Enter the team ID you want: ", (0, len(teams) - 1)
         )
         for team in teams:
@@ -104,7 +104,7 @@ class Interface:
         for index, answer in enumerate(answers):
             print(f"{index+1} - {answer}")
 
-        return self._prompt_selection(
+        return self.prompt_selection(
             "Enter the answer number you think is the correct answer: ",
             (1, len(answers)),
         )

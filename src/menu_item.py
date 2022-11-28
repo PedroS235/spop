@@ -29,7 +29,7 @@ DISCLAIMER: This file is not complete!
 class MenuItem:
     def __init__(self, text, function):
         self.text = text
-        self.onClick = function
+        self.on_click = function
 
     def __str__(self) -> str:
         return self.text

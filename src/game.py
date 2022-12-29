@@ -25,6 +25,7 @@ File Description:
 """
 from os import path, system
 from random import randint
+import time
 
 from utils import load_json
 from cli.interface import Interface
@@ -91,7 +92,8 @@ class Game:
             f"Welcome to you first race weekend which has place in {self.current_track['name']}"
         )
         print("Let's start with the qualifying and see how well you know Formula 1")
-        self.simulate_qualifying()
+        time.sleep(5)
+        self.game_loop()
 
     def simulate_race(self):
         """
@@ -140,3 +142,15 @@ class Game:
             position = 1
 
         print(f"You have qualifed in position {position}.")
+
+    def print1(self):
+        pass
+
+    def game_loop(self):
+        while True:
+            pass
+            # Ask if user desires to quit
+
+            # Play the quiz game
+
+            # Simulate the race

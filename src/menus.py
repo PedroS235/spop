@@ -45,3 +45,8 @@ game_main_menu = Menu("Main Menu")
 item1 = MenuItem("New Game", lambda: Game().new_game())
 item2 = MenuItem("Quit", lambda: sys.exit(0))
 game_main_menu.add_menu_items([item1, item2])
+
+end_game_menu = Menu("Game Menu")
+item1 = MenuItem("Continue", None)
+item2 = MenuItem("Quit", lambda: sys.exit(0))
+end_game_menu.add_menu_items([item1, item2])

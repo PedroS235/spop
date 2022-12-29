@@ -79,13 +79,13 @@ class Interface:
         print("| ID | Name | Performance score |")
         for team in teams:
             print(
-                f"| {team['id']} | {team['name']} | {team['performance_score']}")
+                f"| {team['id']+1} | {team['name']} | {team['performance_score']}")
 
         selected_id = self.prompt_selection(
-            "Enter the team ID you want: ", (0, len(teams) - 1)
+            "Enter the team ID you want: ", (1, len(teams))
         )
         for team in teams:
-            if team["id"] == selected_id:
+            if team["id"] == selected_id-1:
                 return team
         return None
 

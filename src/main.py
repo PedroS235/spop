@@ -37,14 +37,13 @@ class System:
         self.exit = False
         self.interface = Interface()
         self.game = Game()
-        self.currentMenu = None
+        self.current_menu = welcome_menu
 
     def start(self):
-        welcome_menu.print_menu()
+        self.current_menu.print_menu()
         selection = self.interface.prompt_selection(
-            "Please choose one of the available options: ", (1, welcome_menu.nbr_of_menu_items()))
-        welcome_menu.select_menu_item(selection)
-        # self.loop()
+            "Please choose one of the available options: ", (1, self.current_menu.nbr_of_menu_items()))
+        self.current_menu.select_menu_item(selection)
 
 
 if __name__ == "__main__":
